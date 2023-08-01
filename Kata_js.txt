@@ -1,5 +1,58 @@
 Beginner Series #2 Clock
 
+DESCRIPTION:
+Clock shows h hours, m minutes and s seconds after midnight.
+Your task is to write a function which returns the time since midnight in milliseconds.
+Example:
+h = 0
+m = 1
+s = 1
+result = 61000
+Input constraints:
+0 <= h <= 23
+0 <= m <= 59
+0 <= s <= 59
+
+SOLUTION:
 function past(h, m, s){
   return (h*60*60+m*60+s)*1000
+}
+
+*****
+
+Transportation on vacation
+
+DESCRIPTION:
+After a hard quarter in the office you decide to get some rest on a vacation. So you will book a flight for you and your girlfriend and try to leave all the mess behind you.
+You will need a rental car in order for you to get around in your vacation. The manager of the car rental makes you some good offers.
+Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
+Write a code that gives out the total amount for different days(d).
+
+SOLUTION:
+function rentalCarCost(d) {
+  // Your solution here
+   let CostPerDay = 40;
+  var CarCost = CostPerDay*d;
+  
+   
+  if (d >= 7) {CarCost = CarCost - 50} 
+  else if (d >= 3) {CarCost = CarCost -20} 
+  
+  return CarCost
+}
+
+*****
+Beginner Series #1 School Paperwork
+
+DESCRIPTION:
+Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+Example:
+n= 5, m=5: 25
+n=-5, m=5:  0
+
+SOLUTION:
+function paperwork(n, m) {
+ if(n < 0 || m < 0){return 0}
+ else {return n*m}
 }
